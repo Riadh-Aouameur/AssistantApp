@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainPackage.Controller">
+  <children>
+    <MenuBar prefHeight="59.0" prefWidth="900.0" styleClass="lin" stylesheets="@../Css/Css.css" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+         <cursor>
+            <Cursor fx:constant="S_RESIZE" />
+         </cursor>
+    </MenuBar>
+    <SplitPane dividerPositions="0.18485523385300667" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane prefHeight="518.0" prefWidth="98.0" style="-fx-background-color: #fff;">
+               <children>
+                  <TextField fx:id="TFFirstName" layoutX="7.0" layoutY="48.0" promptText="First Name" />
+                  <TextField fx:id="TFLastName" layoutX="7.0" layoutY="90.0" promptText="Last Name" />
+                  <Button layoutX="7.0" layoutY="137.0" mnemonicParsing="false" onAction="#BAdd" prefHeight="26.0" prefWidth="58.0" styleClass="lin" stylesheets="@../Css/Css.css" text="Add" />
+                  <Button layoutX="97.0" layoutY="137.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="26.0" prefWidth="58.0" styleClass="lin" stylesheets="@../Css/Css.css" text="Delete" />
+                  <Label layoutX="7.0" layoutY="8.0" prefHeight="28.0" prefWidth="122.0" text="Add Patient" textAlignment="JUSTIFY" textFill="#01cafe" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+        <ScrollPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="680.0" SplitPane.resizableWithParent="false">
+               <content>
+                  <TableView fx:id="tableView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="530.0" prefWidth="722.0">
+                    <columns>
+                        <TableColumn prefWidth="92.00000154972076" text="ID" />
+                      <TableColumn fx:id="colFirstName" onEditCommit="#onEditFirstName" prefWidth="111.20000457763672" text="First Name" />
+                      <TableColumn fx:id="colLastName" onEditCommit="#onEditLastName" prefWidth="140.00003051757812" text="Last Name " />
+                        <TableColumn prefWidth="128.0" text="Date" />
+                        <TableColumn prefWidth="136.79995727539062" text="Time" />
+                    </columns>
+                  </TableView>
+               </content>
+        </ScrollPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="900.0" spacing="5.0" styleClass="lin" stylesheets="@../Css/Css.css" VBox.vgrow="NEVER">
+      <children>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+        </Label>
+        <Pane prefHeight="27.0" prefWidth="775.0" stylesheets="@../Css/Css.css" HBox.hgrow="ALWAYS" />
+        <Label font="$x3" maxWidth="-1.0" text="Right status" HBox.hgrow="NEVER" />
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+</VBox>
