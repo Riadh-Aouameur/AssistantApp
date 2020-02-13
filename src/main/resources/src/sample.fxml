@@ -54,11 +54,11 @@
                   <TableView fx:id="tableView" prefHeight="321.0" prefWidth="422.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="0.0">
                     <columns>
                         <TableColumn minWidth="0.0" prefWidth="44.800047278404236" text="Id" />
-                      <TableColumn prefWidth="78.4000244140625" text="Number" />
+                      <TableColumn fx:id="colNb" prefWidth="78.4000244140625" text="Number" />
                         <TableColumn fx:id="colFirstName" onEditCommit="#onEditFirstName" prefWidth="77.60004425048828" text="First Name" />
                         <TableColumn fx:id="colLastName" onEditCommit="#onEditLastName" prefWidth="75.20001220703125" text="Last Name" />
-                        <TableColumn prefWidth="68.800048828125" text="Birthday" />
-                      <TableColumn prefWidth="89.5999755859375" text="Sexe" />
+                        <TableColumn fx:id="colBirth" prefWidth="68.800048828125" text="Birthday" />
+                      <TableColumn fx:id="colGender" prefWidth="89.5999755859375" text="Gender" />
                         <TableColumn prefWidth="56.800048828125" text="Time Consultation" />
                         <TableColumn minWidth="0.0" prefWidth="0.0" text="Time End Consultation" />
                     </columns>
