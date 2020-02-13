@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainPackage.Page_3">
+   <children>
+      <TextField layoutX="95.0" layoutY="38.0" promptText="ID" />
+      <TextField layoutX="95.0" layoutY="86.0" promptText="First Name" />
+      <DatePicker layoutX="95.0" layoutY="188.0" promptText="Birtthday" />
+      <Separator layoutX="283.0" layoutY="1.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="34.0" />
+      <TextField layoutX="95.0" layoutY="139.0" promptText="Last Name" />
+      <RadioButton layoutX="149.0" layoutY="239.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="83.0" text="homme" />
+      <RadioButton layoutX="149.0" layoutY="265.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="83.0" text="famme" />
+      <Label layoutX="95.0" layoutY="239.0" text="sexe " />
+      <TextField layoutX="367.0" layoutY="38.0" promptText="Email" />
+      <TextField layoutX="367.0" layoutY="86.0" promptText="Phone" />
+      <TextField layoutX="367.0" layoutY="139.0" promptText="Address" />
+   </children>
+</AnchorPane>
