@@ -23,6 +23,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -55,17 +56,7 @@ public class Controller implements Initializable {
     }
 //-----------------------------------------------------------------------------------------------------------------
 //table View
-    ObservableList<Patient> observableList = FXCollections.observableArrayList(
-            new Patient("smir","benhami","homme",LocalDate.now()),
-            new Patient("sami","benhami","homme",LocalDate.now()),
-            new Patient("samir","benhami","homme",LocalDate.now()),
-            new Patient("samr","benhami","homme",LocalDate.now()),
-            new Patient("samir","benhami","homme",LocalDate.now()),
-            new Patient("sami","benhami","homme",LocalDate.now()),
-            new Patient("samr","benhami","homme",LocalDate.now())
-
-
-    );
+    ObservableList<Patient> observableList = FXCollections.observableArrayList(new Patient("jck","cb","xvc",LocalDate.now()));
 
     @FXML
     private TableColumn<Patient, LocalDate> colBirth;
@@ -94,17 +85,19 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         colFirstName.setCellValueFactory(new PropertyValueFactory<>("FirstName"));
         colLastName.setCellValueFactory(new PropertyValueFactory<>("LastName"));
         colNb.setCellValueFactory(new PropertyValueFactory<>("number"));
         colBirth.setCellValueFactory(new PropertyValueFactory<>("birthday"));
         colGender.setCellValueFactory(new PropertyValueFactory<>("gender"));
+        
 
-
-        tableView.setItems(observableList);
         tableView.setEditable(true);
         colFirstName.setCellFactory(TextFieldTableCell.forTableColumn());
         colLastName.setCellFactory(TextFieldTableCell.forTableColumn());
+        tableView.setItems(observableList);
+
 
 
     }
@@ -121,6 +114,7 @@ public class Controller implements Initializable {
     }
 
     public void onDelete(ActionEvent actionEvent) {
+
         tableView.getItems().remove(tableView.getSelectionModel().getSelectedItem());
     }
 }
