@@ -56,7 +56,7 @@ public class Controller implements Initializable {
     }
 //-----------------------------------------------------------------------------------------------------------------
 //table View
-    ObservableList<Patient> observableList = FXCollections.observableArrayList(new Patient("jck","cb","xvc",LocalDate.now()));
+    ObservableList<Patient> observableList = FXCollections.observableArrayList();
 
     @FXML
     private TableColumn<Patient, LocalDate> colBirth;
@@ -91,7 +91,10 @@ public class Controller implements Initializable {
         colNb.setCellValueFactory(new PropertyValueFactory<>("number"));
         colBirth.setCellValueFactory(new PropertyValueFactory<>("birthday"));
         colGender.setCellValueFactory(new PropertyValueFactory<>("gender"));
-        
+        Patients.addPatient();
+        observableList.setAll(Patients.arrayListPatients);
+
+
 
         tableView.setEditable(true);
         colFirstName.setCellFactory(TextFieldTableCell.forTableColumn());
