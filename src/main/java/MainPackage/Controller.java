@@ -91,7 +91,7 @@ public class Controller implements Initializable {
         colNb.setCellValueFactory(new PropertyValueFactory<>("number"));
         colBirth.setCellValueFactory(new PropertyValueFactory<>("birthday"));
         colGender.setCellValueFactory(new PropertyValueFactory<>("gender"));
-        Patients.addPatient();
+         Patients.addPatient();
         observableList.setAll(Patients.arrayListPatients);
 
 
