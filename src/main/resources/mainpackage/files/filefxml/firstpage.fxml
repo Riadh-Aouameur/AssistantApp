@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="522.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpackage.Page_1">
+   <children>
+      <Pane prefHeight="70.0" prefWidth="600.0" styleClass="lin" stylesheets="@../Css.css" />
+      <Pane layoutY="330.0" prefHeight="70.0" prefWidth="600.0" styleClass="lin2" stylesheets="@../Css.css" />
+      <ImageView fitHeight="258.0" fitWidth="434.0" layoutX="83.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Capture.JPG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
